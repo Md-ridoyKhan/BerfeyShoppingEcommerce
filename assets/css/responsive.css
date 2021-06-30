@@ -1,0 +1,197 @@
+/*################################################### 
+#START
+
+
+RESPONSIVE DEVICE
+=============================
+=============================
+
+1. 1400px devices
+    #home-one-1400-------------------]
+        1.1-1400 VELUE
+	
+
+2. 1200 xlarge devices
+    #home-1200-------------------]
+        2.1-1200 VELUE
+
+
+3. 992px large devices
+    #home-one-992-------------------]
+        3.1-992 header area here
+	
+	
+4. 768px medium devices
+    #home-one-768-------------------]
+        4.1-768 headerTop area here
+	
+
+5. 576px small devices
+    #home-one-576-------------------]
+        5.1-576 headerTop area here
+        5.2-576 header area here
+
+
+#theEND
+###################################################*/
+
+
+
+/*##############################
+Extra large: ---------
+1. 1400px devices
+##############################*/
+@media screen and (max-width: 1400px){
+    /* 
+    #home-one-1400-------------------]
+    */
+    /*********************** 
+    1.1-1400 VELUE
+    ***********************/
+}
+
+
+/*############################## 
+Extra large: ---------
+2. 1200 xlarge devices
+##############################*/
+@media screen and (max-width: 1200px){
+    /* 
+    #home-one-1200-------------------]
+    */
+    /*********************** 
+    2.1-1200 VELUE
+    ***********************/
+}
+
+
+/*############################## 
+large layout:  --------- 
+3. 992px large devices
+##############################*/
+@media screen and (max-width: 991px){
+    /* 
+    #home-one-992-------------------]
+    */
+
+    /*********************** 
+    3.1-992 header area here
+    ***********************/
+    ul.nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 205px;
+        background: var(--primaryOne);
+        flex-direction: column;
+        padding: 120px 20px 20px 20px;
+        z-index: 100;
+    }
+    ul.nav.active{
+        left: 0%;
+    }
+    .closeMenu {
+        display: block;
+        position: absolute !important;
+        top: 40px;
+        right: 40px;
+    }
+    .closeMenu a {
+        padding: 0 !important;
+    }
+    .closeMenu a i {
+        font-size: 26px;
+    }
+    ul.nav > li {
+        margin-left: 0;
+    }
+    ul.nav > li > a {
+        padding: 16px 0px;
+    }
+    ul.nav > li > a:hover {
+        color: var(--white);
+        text-decoration: underline;
+    }
+    ul.nav > li:hover ul.subNav {
+        position: relative;
+        width: 100%;
+        background-color: var(--primaryTwo);
+    }
+    .headerSeach {
+        margin-left: 0;
+    }
+    .mobileMenu {
+        display: block;
+    }
+
+
+
+
+}
+
+
+/*############################## 
+Medium Layout: ---------
+4. 768px medium devices
+##############################*/
+@media screen and (max-width: 768px){
+    /* 
+    #home-one-768-------------------]
+    */
+    /*********************** 
+    4.1-768 headerTop area here
+    ***********************/
+    .headerTopItems {
+        flex-direction: column;
+        align-items: center;
+    }
+    .headerTopLeft {
+        margin-bottom: 14px;
+    }
+
+
+
+}
+
+
+/*############################## 
+Small Layout: ---------
+5. 576px small devices
+##############################*/
+@media screen and (max-width: 576px){
+    /* 
+    #home-one-576-------------------]
+    */
+
+    /*********************** 
+    5.1-576 headerTop area here
+    ***********************/
+    .headerTopLeft {
+        flex-direction: column;
+        align-items: center;
+    }
+    .headerTopLeft li:last-child {
+        margin-left: 0;
+        margin-top: 14px;
+    }
+
+
+    /*********************** 
+    5.2-576 header area here
+    ***********************/
+    .headerSeach li:first-child {
+        display: none;
+    }
+    .headerSeach li {
+        margin-left: 0;
+    }
+    .headerSeach li a {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+/*########################
+#theEndRESPONSIVE########################
+########################*/
