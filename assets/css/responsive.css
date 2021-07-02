@@ -8,7 +8,7 @@ RESPONSIVE DEVICE
 
 1. 1400px devices
     #home-one-1400-------------------]
-        1.1-1400 VELUE
+        1.1-1400 banner area here
 	
 
 2. 1200 xlarge devices
@@ -24,12 +24,14 @@ RESPONSIVE DEVICE
 4. 768px medium devices
     #home-one-768-------------------]
         4.1-768 headerTop area here
+        4.2-768 banner area here
 	
 
 5. 576px small devices
     #home-one-576-------------------]
         5.1-576 headerTop area here
         5.2-576 header area here
+        5.3-576 banner area here
 
 
 #theEND
@@ -46,8 +48,15 @@ Extra large: ---------
     #home-one-1400-------------------]
     */
     /*********************** 
-    1.1-1400 VELUE
+    1.1-1400 banner area here
     ***********************/
+    .banner {
+        padding: 180px 0px;
+    }
+    .bannerContent h1 {
+        font-size: 60px;
+        line-height: 70px;
+    }
 }
 
 
@@ -86,6 +95,11 @@ large layout:  ---------
         flex-direction: column;
         padding: 120px 20px 20px 20px;
         z-index: 100;
+        transition: all .4s ease;
+        -webkit-transition: all .4s ease;
+        -moz-transition: all .4s ease;
+        -ms-transition: all .4s ease;
+        -o-transition: all .4s ease;
     }
     ul.nav.active{
         left: 0%;
@@ -149,7 +163,13 @@ Medium Layout: ---------
         margin-bottom: 14px;
     }
 
-
+    /*********************** 
+    4.2-768 banner area here
+    ***********************/
+    .bannerContent h1 br,
+    .bannerContent p br {
+        display: none;
+    }
 
 }
 
@@ -162,7 +182,6 @@ Small Layout: ---------
     /* 
     #home-one-576-------------------]
     */
-
     /*********************** 
     5.1-576 headerTop area here
     ***********************/
@@ -174,7 +193,6 @@ Small Layout: ---------
         margin-left: 0;
         margin-top: 14px;
     }
-
 
     /*********************** 
     5.2-576 header area here
@@ -189,6 +207,21 @@ Small Layout: ---------
         width: 40px;
         height: 40px;
     }
+
+    /*********************** 
+    5.3-576 banner area here
+    ***********************/
+    .banner {
+        padding: 120px 0px;
+    }
+    .bannerContent h1 {
+        font-size: 48px;
+        line-height: 58px;
+    }
+
+
+
+
 }
 
 

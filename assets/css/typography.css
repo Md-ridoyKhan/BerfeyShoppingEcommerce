@@ -27,7 +27,6 @@ h6 {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     color: #000;
-    letter-spacing: 1.5px;
 }
 
 h1 a,
@@ -342,7 +341,7 @@ h3 {
 
 h4 {
     font-size: 20px;
-    line-height: 25px;
+    line-height: 30px;
 }
 
 h5 {
@@ -353,6 +352,7 @@ h5 {
 p {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
+    font-weight: 400;
     line-height: 26px;
     color: var(--textMont);
 
@@ -399,6 +399,12 @@ ul{
     --primaryTwo: #C44E00;
     --fbBG: #FBFBFB;
     --f3BG: #F3F3F3;
+    --ecbg: #ECECEC;
 }
+
+.paddingItem{
+    padding: 140px 0px;
+}
+
 
 /* Your Custom Typography. */

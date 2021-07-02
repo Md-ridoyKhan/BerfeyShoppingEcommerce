@@ -22,6 +22,7 @@ CSS INDEX
     1.3 headerTop area here
     1.4 header area here
     1.5 banner area here
+    1.6 feature area here
 
 2. home-two
     2.1 banner area here
@@ -310,30 +311,103 @@ header area ends here
 /*===========================
 1.5 banner area here  
 ===========================*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.banner {
+    position: relative;
+    padding: 268.5px 0px;
+    overflow: hidden;
+    z-index: 0;
+    background-color: var(--ecbg);
+}
+.banner::before {
+    position: absolute;
+    content: '';
+    background: url("../images/graphic/discover.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 5%;
+    z-index: -1;
+}
+.bannerImages {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.bannerImg {
+    position: absolute;
+    top: 0;
+    left: calc(45%);
+    z-index: -1;
+}
+.bannerContent h1 {
+    margin-bottom: 20px;
+}
+.bannerContent p {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+.primaryOneBtn {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 28px;
+    text-transform: capitalize;
+    color: var(--white) !important;
+    background: var(--primaryOne);
+    border-radius: 0;
+    padding: 15px 42px;
+}
+.primaryOneBtn:hover{
+    background: var(--primaryTwo);
+}
 /*---------------------------
 banner area ends here 
 ---------------------------*/
 
 
-
-
-
-
-
+/*===========================
+1.6 feature area here  
+===========================*/
+.feature {
+    position: relative;
+    overflow: hidden;
+}
+.featureItems {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(232px, 1fr));
+    grid-gap: 30px;
+}
+.featureItem {
+    padding: 20px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -ms-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    box-shadow: 0px 0px 25px var(--f3BG);
+}
+.featureItem:hover{
+    border: 2px solid var(--textMont);
+    transform: scale(1.1);
+}
+.featureItem img {
+    margin-bottom: 12px;
+}
+.featureItem h4 {
+    margin-bottom: 4px;
+}
+/*---------------------------
+feature area ends here 
+---------------------------*/
 
 
 
