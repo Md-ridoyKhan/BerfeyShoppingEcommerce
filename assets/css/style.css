@@ -93,11 +93,11 @@ preloader area ends here
     width: 42px;
     height: 42px;
     border-radius: 50%;
-    transition: all .5s ease;
-    -o-transition: all .5s ease;
-    -ms-transition: all .5s ease;
-    -moz-transition: all .5s ease;
-    -webkit-transition: all .5s ease;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
 }
 .topUp-btn i{
     display: inline-block;
@@ -109,11 +109,11 @@ preloader area ends here
     font-weight: 600;
     color: var(--primaryOne);
     display: block;
-    transition: all .5s ease;
-    -o-transition: all .5s ease;
-    -ms-transition: all .5s ease;
-    -moz-transition: all .5s ease;
-    -webkit-transition: all .5s ease;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
 }
 .topUp-btn:hover{
     background: var(--primaryOne);
@@ -145,11 +145,11 @@ topUp-btn area ends here
     font-size: 14px;
 }
 .headerTopItems ul li a i{
-    transition: all .4s ease;
-    -webkit-transition: all .4s ease;
-    -moz-transition: all .4s ease;
-    -ms-transition: all .4s ease;
-    -o-transition: all .4s ease;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
 }
 .headerTopItems ul li a:hover, 
 .headerTopItems ul li a:hover i, 
@@ -184,6 +184,9 @@ header.active {
     width: 100%;
     top: 0;
     z-index: 100;
+    animation-duration: 0.8s;
+    animation-name: fadeInDown;
+    animation-timing-function: ease-in-out;
 }
 .headerItems {
     display: flex;
@@ -240,11 +243,11 @@ ul.subNav {
     -moz-transform-origin: top;
     -ms-transform-origin: top;
     -o-transform-origin: top;
-    transition: all .4s ease;
-    -webkit-transition: all .4s ease;
-    -moz-transition: all .4s ease;
-    -ms-transition: all .4s ease;
-    -o-transition: all .4s ease;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
     z-index: 100;
 }
 ul.nav > li:hover ul.subNav{
@@ -331,18 +334,30 @@ header area ends here
     opacity: 5%;
     z-index: -1;
 }
-.bannerImages {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-}
+.bannerImages {}
 .bannerImg {
     position: absolute;
     top: 0;
     left: calc(45%);
     z-index: -1;
+    -webkit-animation-name: spaceboots;
+	-webkit-animation-duration: 0.8s;
+	-webkit-transform-origin:50% 50%;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+@-webkit-keyframes spaceboots {
+	0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+	10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+	20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+	30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+	40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+	50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+	60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+	70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+	80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+	90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+	100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
 }
 .bannerContent h1 {
     margin-bottom: 20px;
@@ -362,9 +377,22 @@ header area ends here
     background: var(--primaryOne);
     border-radius: 0;
     padding: 15px 42px;
+    -webkit-animation: swinging 3.5s ease-in-out forwards infinite;
+    animation: swinging 3s ease-in-out forwards infinite;
 }
 .primaryOneBtn:hover{
     background: var(--primaryTwo);
+}
+/* Hanging KeyFrames */
+@-webkit-keyframes swinging{
+	0%{-webkit-transform: rotate(10deg);}
+	50%{-webkit-transform: rotate(-5deg);}
+	100%{-webkit-transform: rotate(10deg);}
+}
+@keyframes swinging{
+	0%{transform: rotate(10deg);}
+	50%{transform: rotate(-5deg);}
+	100%{transform: rotate(10deg);}
 }
 /*---------------------------
 banner area ends here 
@@ -388,19 +416,27 @@ banner area ends here
     padding: 20px;
     border: 2px solid transparent;
     border-radius: 4px;
-    transition: all .4s ease;
-    -webkit-transition: all .4s ease;
-    -moz-transition: all .4s ease;
-    -ms-transition: all .4s ease;
-    -o-transition: all .4s ease;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
     box-shadow: 0px 0px 25px var(--f3BG);
 }
 .featureItem:hover{
     border: 2px solid var(--textMont);
     transform: scale(1.1);
 }
+.featureItem:hover img{
+    transform: rotate(360deg);
+}
 .featureItem img {
     margin-bottom: 12px;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
 }
 .featureItem h4 {
     margin-bottom: 4px;

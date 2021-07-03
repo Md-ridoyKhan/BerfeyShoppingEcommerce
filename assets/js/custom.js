@@ -28,13 +28,13 @@ $(document).ready(function(){
     // topUp-btn
     $(window).scroll(function(){
         if($(this).scrollTop() > 100){
-            $(".topUp-btn").fadeIn(800);
+            $(".topUp-btn").fadeIn(1000);
         } else{
-            $(".topUp-btn").fadeOut(800);
+            $(".topUp-btn").fadeOut(1000);
         }
     });
     $(".topUp-btn").click(function(){
-        $(" html,body").animate({scrollTop : 0}, 1000);
+        $(" html").animate({scrollTop : 0}, 1000);
     });
 
 });
